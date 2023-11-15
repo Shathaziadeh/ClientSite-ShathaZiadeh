@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Record Details</h1>
+  <h2>{{ record.title }}</h2>
+  <p><strong>Artist:</strong> {{ record.artist }}</p>
+  <p><strong>Release Year:</strong> {{ record.release_year }}</p>
+  <p>Debug: {{ record }}</p>  {# Add this line for debugging #}
+  <a href="{% url 'recordrental:record-list' %}">Back to Record List</a>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome to the Record Rental Service</h1>
+  <p>
+    Explore our vast collection of vinyl records, cassettes, CDs, equipment, and more.
+    Rent high-quality audio products with a touch of vintage and sustainable aesthetics.
+  </p>
+  <h2>Records</h2>
+  <p>The Record Rental Service offers:</p>
+  <ul>
+    <li><strong>Vinyl Records: </strong>{{ num_records }}</li>
+    <li><strong>Cassettes: </strong>{{ num_cassettes }}</li>
+    <li><strong>CDs: </strong>{{ num_cds }}</li>
+    <li><strong>Equipment: </strong>{{ num_equipment }}</li>
+  </ul>
+  <p> 
+    You have visited this page {{ num_visits }} time{{ num_visits|pluralize:"s" }}.
+  </p>
+{% endblock %}

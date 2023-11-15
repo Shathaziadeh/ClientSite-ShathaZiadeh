@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Cassette List</h1>
+  <ul>
+    {% for cassette in cassette_list %}
+      <li><a href="{% url 'recordrental:cassette-detail' cassette.pk %}">{{ cassette.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

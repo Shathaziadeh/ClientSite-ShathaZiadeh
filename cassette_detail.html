@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Cassette Details</h1>
+  <h2>{{ cassette.title }}</h2>
+  <p><strong>Artist:</strong> {{ cassette.artist }}</p>
+  <p><strong>Release Year:</strong> {{ cassette.release_year }}</p>
+  <a href="{% url 'recordrental:cassette-list' %}">Back to Cassette List</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>CD List</h1>
+  <ul>
+    {% for cd in cd_list %}
+      <li><a href="{% url 'recordrental:cd-detail' cd.pk %}">{{ cd.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Equipment List</h1>
+  <ul>
+    {% for equipment in equipment_list %}
+      <li><a href="{% url 'recordrental:equipment-detail' equipment.pk %}">{{ equipment.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

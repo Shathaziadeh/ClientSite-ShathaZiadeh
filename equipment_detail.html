@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Equipment Details</h1>
+  <h2>{{ equipment.name }}</h2>
+  <p><strong>Type:</strong> {{ equipment.type }}</p>
+  <p><strong>Description:</strong> {{ equipment.description }}</p>
+  <a href="{% url 'recordrental:equipment-list' %}">Back to Equipment List</a>
+{% endblock %}

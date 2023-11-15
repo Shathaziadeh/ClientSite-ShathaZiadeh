@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>CD Details</h1>
+  <h2>{{ cd.title }}</h2>
+  <p><strong>Artist:</strong> {{ cd.artist }}</p>
+  <p><strong>Release Year:</strong> {{ cd.release_year }}</p>
+  <a href="{% url 'recordrental:cd-list' %}">Back to CD List</a>
+{% endblock %}
